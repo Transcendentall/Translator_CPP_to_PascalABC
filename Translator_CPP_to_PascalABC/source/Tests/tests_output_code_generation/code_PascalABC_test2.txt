@@ -1,0 +1,7 @@
+var
+    a : integer := 2;
+    b : integer := 2;
+    c : integer := a+b;
+begin
+    writeln(c)
+end.

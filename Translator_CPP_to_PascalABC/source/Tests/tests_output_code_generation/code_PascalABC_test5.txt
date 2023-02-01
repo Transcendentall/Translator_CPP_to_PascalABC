@@ -1,0 +1,24 @@
+var
+    a : double := 4.621;
+begin
+    if (a>12) then
+        begin
+            a := a+2+3.41;
+        end
+    else
+        begin
+            if (a<30) then
+                begin
+                    a := 5.2*2.14;
+                end
+            else
+                begin
+                    if (a>0) then
+                        begin
+                            a := a/3.33*2.11;
+                        end;
+                    a := 2.3+a/5.55;
+                end;
+        end;
+    writeln(a)
+end.

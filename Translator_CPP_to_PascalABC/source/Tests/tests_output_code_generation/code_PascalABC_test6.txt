@@ -1,0 +1,18 @@
+var
+    a : integer := 4;
+    i : integer := 1;
+    j : integer := 1;
+begin
+    while (i<10) do
+    begin
+        while (j>5) do
+        begin
+            a := a+i-j;
+            Dec(j);
+;
+        end;
+        Inc(i);
+;
+    end;
+    writeln(a)
+end.

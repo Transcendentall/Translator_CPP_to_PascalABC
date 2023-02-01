@@ -1,0 +1,26 @@
+var
+    a : integer := 3;
+    r : integer := 0;
+
+function func1(x : integer): integer;
+begin
+    Result := 1;
+end;
+
+
+function func2(y : integer): integer;
+begin
+    Result := y+2+3;
+end;
+
+
+function func3(z : integer): integer;
+begin
+    z := 2+3-z;
+    Result := z-4+1*5;
+end;
+
+begin
+    r := func3(func2(func1(a)));
+    writeln(r)
+end.

@@ -1,0 +1,11 @@
+var
+    a : integer := 2;
+    b : integer := 2;
+    c : integer := 2+a+b-5*2+1-a*b+4;
+begin
+    if (c>3) then
+        begin
+            c := c+b;
+        end;
+    writeln(c)
+end.

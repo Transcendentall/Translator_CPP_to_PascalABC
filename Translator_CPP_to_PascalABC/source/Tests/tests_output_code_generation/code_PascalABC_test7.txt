@@ -1,0 +1,9 @@
+var
+    a : real := 3.25;
+begin
+    while (a>0.55) do
+    begin
+        a := a/3.3*2.2;
+    end;
+    writeln(a)
+end.
