@@ -2,7 +2,7 @@ from source.GrammarParser import TreeNode, Node
 from source.LexicalAnalyzer import ErrorTypeSemantic
 
 class ReservedWords:
-    data = ['std', 'endl', 'cin', 'include', 'iostream', 'cmath', 'bool', 'char', 'short', 'unsigned', 'int', 'float', 'double', 'abs', 'sqr', 'sqrt', 'pow', 'ceil', 'floor', 'true', 'false', 'if', 'else', 'for', 'while', 'void', 'main']
+    data = ['bool', 'char', 'short', 'unsigned', 'int', 'float', 'double', 'true', 'false', 'if', 'else', 'for', 'while', 'void']
 
 
 class Variable(object):
@@ -250,9 +250,9 @@ class VariableSemanticAnalyser:
             newScope = scope.addChildren()
         if node.rule.name == '<цикл while>':
             newScope = scope.addChildren()
-        # if node.rule.name == '<объявление функции>':
-        #     newScope = scope.addChildren()
-        #     self.addFunction(node, newScope)
+        if node.rule.name == '<объявление функции>':
+            newScope = scope.addChildren()
+            self.addFunction(node, newScope)
         if node.rule.name == '<главная функция>':
             newScope = scope.addChildren()
         if node.children:
