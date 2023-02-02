@@ -218,6 +218,7 @@ class LexicalAnalyzer:
         resultLine = " { ".join(resultLine.split("{"))
         resultLine = " } ".join(resultLine.split("}"))
         resultLine = " ; ".join(resultLine.split(";"))
+        resultLine = " , ".join(resultLine.split(","))
         return " : ".join(resultLine.split(":")).rstrip()
 
     def __checkBySymbol(self, word, lineNumber):

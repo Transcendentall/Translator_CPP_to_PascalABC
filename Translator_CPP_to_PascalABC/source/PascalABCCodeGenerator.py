@@ -271,7 +271,6 @@ class Generator(object):
         result = VarNode(parentNode, "var " + varName + " : " + Types[varType])
         result.addBody(expVal)
 
-
         return result
 
     def __parseFor(self, treeNode, parentNode):
