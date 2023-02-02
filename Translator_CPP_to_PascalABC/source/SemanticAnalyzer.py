@@ -111,10 +111,6 @@ class VariableSemanticAnalyser:
             print(SemanticError(node.lexeme.lineNumber, newVariable.name,
                                 ErrorTypeSemantic.USAGE_OF_RESERVED_IDENTIFIER.value))
             errorCheck = True
-        if scope.exist(newVariable.name, scope):
-            print(SemanticError(node.lexeme.lineNumber, newVariable.name,
-                                ErrorTypeSemantic.MULTIPLE_VARIABLE_DECLARATION.value))
-            errorCheck = True
         if errorCheck is None:
             scope.addVariable(newVariable)
 

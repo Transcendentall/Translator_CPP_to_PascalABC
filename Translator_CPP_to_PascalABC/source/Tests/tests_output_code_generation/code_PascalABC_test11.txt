@@ -1,0 +1,11 @@
+begin
+    var a : integer := 3;
+    if (a=3) then
+        begin
+            var c : integer := 10;
+        end
+    else
+        begin
+            var c : integer := 15;
+        end
+end.
