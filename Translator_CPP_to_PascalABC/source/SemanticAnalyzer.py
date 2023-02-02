@@ -102,7 +102,10 @@ class VariableSemanticAnalyser:
                 if len(part.children) == 0:
                     typeCheck = self.findExpressionType(part)
                 else:
-                    typeCheck = self.parseExpression(part.children[0], scope)
+                    try:
+                        typeCheck = self.parseExpression(part.children[0], scope)
+                    except BaseException:
+                        print(SemanticError(node.lexeme.lineNumber, part.lexeme.lexeme, ErrorTypeSemantic.UNDECLARED_VARIABLE.value))
         if typeCheck and newVariable.type_v not in typeCheck and newVariable.name[0] is not None:
             print(SemanticError(node.lexeme.lineNumber, newVariable.name,
                                 ErrorTypeSemantic.TYPE_MISMATCH.value))
