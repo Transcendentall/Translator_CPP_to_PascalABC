@@ -1,29 +1,29 @@
-function fun1(n : integer): integer;
-begin
-    var b : integer := n+2;
-    var r : integer := 0;
-    b := b*2;
-    if (b<10) then
-        begin
-            r := b-4;
-        end
+int fun1(int n) {
+    int b = n + 2;
+    int f = 0;
+    b = b * 2;
+    if (b < 10)
+    {
+        f = b - 4;
+    }
     else
-        begin
-            if (b>20) then
-                begin
-                    r := b*b;
-                end
-            else
-                begin
-                    r := 2;
-                end;
-        end;
-    Result := r;
-end;
+    {
+        if (b > 20)
+        {
+            f = b * b;
+        }
+        else
+        {
+            std::cout << 00000000000000000000;
+            f = 2;
+        }
+    }
+    return f;
+}
 
-begin
-    var a : integer := 3;
-    var res : integer := 0;
-    res := fun1(a);
-    writeln(res)
-end.
+void main() {
+    int a = 3;
+    int b = 0;
+    b = fun1(a);
+    std::cout << b;
+}
