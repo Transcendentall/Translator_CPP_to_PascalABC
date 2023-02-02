@@ -2,7 +2,7 @@ from source.GrammarParser import TreeNode, Node
 from source.LexicalAnalyzer import ErrorTypeSemantic
 
 class ReservedWords:
-    data = ['std', 'endl', 'cin', 'include', 'iostream', 'cmath', 'bool', 'char', 'short', 'unsigned', 'int', 'float', 'double', 'abs', 'sqr', 'sqrt', 'pow', 'ceil', 'floor', 'true', 'false', 'if', 'else', 'for', 'while', 'void', 'main']
+    data = ['std', 'endl', 'cin', 'include', 'iostream', 'cmath', 'bool', 'char', 'short', 'unsigned', 'int', 'float', 'double', 'abs', 'sqr', 'sqrt', 'pow', 'ceil', 'floor', 'true', 'false', 'if', 'else', 'for', 'while', 'void']
 
 
 class Variable(object):
@@ -110,10 +110,6 @@ class VariableSemanticAnalyser:
         if newVariable.name in ReservedWords.data and newVariable.name[0] is not None:
             print(SemanticError(node.lexeme.lineNumber, newVariable.name,
                                 ErrorTypeSemantic.USAGE_OF_RESERVED_IDENTIFIER.value))
-            errorCheck = True
-        if scope.exist(newVariable.name, scope):
-            print(SemanticError(node.lexeme.lineNumber, newVariable.name,
-                                ErrorTypeSemantic.MULTIPLE_VARIABLE_DECLARATION.value))
             errorCheck = True
         if errorCheck is None:
             scope.addVariable(newVariable)

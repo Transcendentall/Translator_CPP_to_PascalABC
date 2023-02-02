@@ -267,8 +267,10 @@ class Generator(object):
         if expVal.body is not None:
             result.addBody(expVal)
 
-        func = self.__getNearestFunc(parentNode)
-        func.addVar(result)
+        self.__parseExpression(treeNode.children[0], expVal, parentNode)
+        result = VarNode(parentNode, "var " + varName + " : " + Types[varType])
+        result.addBody(expVal)
+
 
         return result
 
