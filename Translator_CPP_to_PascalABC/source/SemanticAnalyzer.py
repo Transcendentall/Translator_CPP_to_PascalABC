@@ -135,7 +135,7 @@ class VariableSemanticAnalyser:
                 print(SemanticError(node.lexeme.lineNumber, nameCheck, ErrorTypeSemantic.TYPE_MISMATCH.value))
 
     def checkFunction(self, node:Node):
-        nameCheck = node.children[0].lexeme
+        nameCheck = node.children[0].lexeme.lexeme
         for fun in self.functions:
             if fun.name == nameCheck:
                 return
