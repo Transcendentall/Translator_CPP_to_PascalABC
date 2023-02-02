@@ -1,0 +1,47 @@
+
+function super_calculator(n : integer): integer;
+begin
+    var b : integer := n+2;
+    var calc : integer := 0;
+    b := b*2;
+    if (b<10) then
+        begin
+            var u : integer := 3;
+            calc := u;
+            calc := b-4;
+        end
+    else
+        begin
+            if (b>20) then
+                begin
+                    var u : integer := 6;
+                    calc := b*b;
+                end
+            else
+                begin
+                    writeln(00000000000000000000);
+                    calc := 2;
+                    if (b=15) then
+                        begin
+                            var u : integer := 9;
+                            while (b>12) do
+                            begin
+                                Inc(calc);
+                                calc := calc+u;
+                                Dec(b);
+                            end;
+                        end;
+                end;
+        end;
+    Result := calc;
+end;
+
+begin
+    var a : integer := 3;
+    if (a=3) then
+        begin
+            var r : integer := 5;
+            r := super_calculator(a);
+            writeln(r);
+        end
+end.

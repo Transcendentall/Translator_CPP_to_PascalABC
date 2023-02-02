@@ -1,0 +1,3 @@
+begin
+    var main : integer := 3
+end.
