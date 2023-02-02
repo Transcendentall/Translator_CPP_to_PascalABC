@@ -1,13 +1,15 @@
-var
-    a : integer := 3;
-    c : integer;
+
+function cou(a : integer): integer;
 begin
-    if (a=3) then
-        begin
-            c := 10;
-        end
-    else
-        begin
-            c := 15;
-        end
+    while (a<100) do
+    begin
+        a := a*a-a+a*3-4;
+        writeln(a);
+    end;
+    Result := a;
+end;
+
+begin
+    var a : integer := 7;
+    a := cou(a)
 end.
