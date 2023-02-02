@@ -1,33 +1,31 @@
-var
-    a : integer := 3;
-    r : integer := 0;
 
-function super_calculator(n : integer): integer;
-var
-    b : integer := n+2;
-    calc : integer := 0;
+function fun1(n : integer): integer;
 begin
+    var b : integer := n+2;
+    var f : integer := 0;
     b := b*2;
     if (b<10) then
         begin
-            calc := b-4;
+            f := b-4;
         end
     else
         begin
             if (b>20) then
                 begin
-                    calc := b*b;
+                    f := b*b;
                 end
             else
                 begin
                     writeln(00000000000000000000);
-                    calc := 2;
+                    f := 2;
                 end;
         end;
-    Result := calc;
+    Result := f;
 end;
 
 begin
-    r := super_calculator(a);
-    writeln(r)
+    var a : integer := 3;
+    var b : integer := 0;
+    b := fun1(a);
+    writeln(b);
 end.
