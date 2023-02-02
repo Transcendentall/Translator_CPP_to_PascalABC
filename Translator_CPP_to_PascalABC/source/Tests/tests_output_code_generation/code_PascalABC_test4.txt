@@ -1,6 +1,5 @@
-var
-    a : real := 2.41;
-    b : real := sqrt(abs(sqr(a+1*2)));
 begin
-    writeln(b)
+    var a : real := 2.41;
+    var b : real := sqrt(abs(sqr(a+1*2)));
+    writeln(b);
 end.

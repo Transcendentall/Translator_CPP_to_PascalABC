@@ -1,9 +1,8 @@
-var
-    a : real := 3.25;
 begin
+    var a : real := 3.25;
     while (a>0.55) do
     begin
         a := a/3.3*2.2;
     end;
-    writeln(a)
+    writeln(a);
 end.

@@ -1,6 +1,5 @@
-var
-    a : double := 4.621;
 begin
+    var a : double := 4.621;
     if (a>12) then
         begin
             a := a+2+3.41;
@@ -20,5 +19,5 @@ begin
                     a := 2.3+a/5.55;
                 end;
         end;
-    writeln(a)
+    writeln(a);
 end.

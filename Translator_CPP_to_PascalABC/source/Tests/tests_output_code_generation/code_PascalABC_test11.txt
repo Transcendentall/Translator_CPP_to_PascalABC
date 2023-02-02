@@ -1,11 +1,27 @@
+
+function megafunc(a : integer; b : integer; c : integer): integer;
 begin
-    var a : integer := 3;
-    if (a=3) then
+    if (a>5) then
         begin
-            var c : integer := 10;
+            a := 4*a;
         end
     else
         begin
-            var c : integer := 15;
-        end
+            if (b<3) then
+                begin
+                    b := 2*c;
+                end
+            else
+                begin
+                    c := b*a*6;
+                end;
+        end;
+    Result := 3;
+end;
+
+begin
+    var a : integer := 3;
+    var b : integer := 2;
+    var c : integer := megafunc(a,b,5);
+    writeln(c);
 end.

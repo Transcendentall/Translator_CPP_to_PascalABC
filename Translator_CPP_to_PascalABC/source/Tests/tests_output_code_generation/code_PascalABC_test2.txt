@@ -1,7 +1,6 @@
-var
-    a : integer := 2;
-    b : integer := 2;
-    c : integer := a+b;
 begin
-    writeln(c)
+    var a : integer := 2;
+    var b : integer := 2;
+    var c : integer := a+b;
+    writeln(c);
 end.
