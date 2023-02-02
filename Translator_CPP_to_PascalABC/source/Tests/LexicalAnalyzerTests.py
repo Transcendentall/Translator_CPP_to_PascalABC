@@ -163,7 +163,7 @@ class LexicalAnalyzerTests(unittest.TestCase):
     def test_LexemeType_Colon(self):
         self.assertEqual(self.lexicalAnalyzer.returnLexemes(51), 'COLON')
 
-    def test_LexemeType_String_Data(self):
+    def test_LexemeType_Colon(self):
         self.assertEqual(self.lexicalAnalyzer.returnLexemes(52), 'STRING_DATA')
 
 
